@@ -101,10 +101,11 @@ public class SalesRecords {
 			System.out.println("*******************************");
 			System.out.println("Customer number: " + custNumber);
 			System.out.println("Customer name: " + name);
-			System.out.println("Sales amount: " + roundToTwoDec(salesAmount));
+			System.out.println("Sales amount: $" + roundToTwoDec(salesAmount));
 			System.out.println("Tax code: " + taxCode);
-			System.out.println("Tax amount: " + roundToTwoDec(tax));
-			System.out.println("Total amount due: " + roundToTwoDec(salesTotal));
+			System.out.println("Tax percent: " + taxPercent * 100 + "%");
+			System.out.println("Tax amount: $" + roundToTwoDec(tax));
+			System.out.println("Total amount due: $" + roundToTwoDec(salesTotal));
 			System.out.println("*******************************");
 			
 			//prompt for repeat
@@ -116,7 +117,7 @@ public class SalesRecords {
 		scan.close();
 	}
 	
-	//fuction to round to 2 dec places
+	//function to round to 2 dec places
 	public static double roundToTwoDec(double d)  
 	{   
 	   int temp = (int)(d * Math.pow(10 , 2));  
